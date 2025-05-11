@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+.global-header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+  color: #ccc;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 160px 50px 80px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3.2em;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #ddd;
+}
+
+.hero-gallery {
+  width: 50%;
+  position: relative;
+  animation: floatGallery 15s linear infinite;
+}
+
+.gallery-img {
+  position: absolute;
+  object-fit: cover;
+  opacity: 0.25;
+  border-radius: 0;
+  transition: transform 0.3s;
+}
+
+.img1 { top: 0; left: 20px; }
+.img2 { top: 120px; left: 100px; }
+.img3 { top: 240px; left: -30px; }
+.img4 { top: 360px; left: 80px; }
+.img5 { top: 480px; left: 10px; }
+
+@keyframes floatGallery {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100px); }
+}

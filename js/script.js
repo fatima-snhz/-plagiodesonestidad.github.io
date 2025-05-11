@@ -1,0 +1,1 @@
+console.log('El Cambio cargado con fondo animado y estructura Squarespace.');
